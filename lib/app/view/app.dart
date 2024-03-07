@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_task_101/counter/counter.dart';
+import 'package:flutter_task_101/features/github_search/github_cache.dart';
+import 'package:flutter_task_101/features/github_search/github_client.dart';
+import 'package:flutter_task_101/features/github_search/github_repository.dart';
+import 'package:flutter_task_101/features/github_search/view/github_search.dart';
 import 'package:flutter_task_101/l10n/l10n.dart';
 
 class App extends StatelessWidget {
@@ -7,6 +10,8 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final githubRepository = GithubRepository(GithubCache(), GithubClient());
+
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: AppBarTheme(
@@ -16,7 +21,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const CounterPage(),
+      home: GithubSearch(githubRepository: githubRepository),
     );
   }
 }
