@@ -1,5 +1,5 @@
 import 'package:equatable/equatable.dart';
-import 'package:flutter_task_101/features/github_search/models/models.dart';
+import 'package:flutter_task_101/features/github_repo/models/models.dart';
 
 sealed class GithubSearchState extends Equatable {
   const GithubSearchState();

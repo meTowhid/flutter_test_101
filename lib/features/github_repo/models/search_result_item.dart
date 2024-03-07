@@ -1,4 +1,4 @@
-import 'package:flutter_task_101/features/github_search/models/github_user.dart';
+import 'package:flutter_task_101/features/github_repo/models/github_user.dart';
 
 class SearchResultItem {
   const SearchResultItem({

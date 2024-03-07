@@ -1,4 +1,4 @@
-import 'package:flutter_task_101/features/github_search/models/models.dart';
+import 'package:flutter_task_101/features/github_repo/models/models.dart';
 
 class GithubCache {
   final _cache = <String, SearchResult>{};
